@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kaisei HarunoUmi', serif;
+}
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(60deg, rgba(2,0,36,1) 7%, rgba(9,9,121,1) 18%, rgba(134,0,255,1) 85%);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.Conteiner-Principal {
+    width: 80%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.Nav-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Logo {
+    width: 50px;
+    margin: 30px 0;
+}
+
+nav {
+    width: 100%;
+    text-align: right;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.Nav-itens{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.Nav-itens:hover{
+    color: #fb5283;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.Primeira-Coluna{
+    margin-left: 50px;
+    position: relative;
+}
+
+.Primeira-Coluna::before{
+    content: " ";
+    width: 10px;
+    height: 57%;
+    background: linear-gradient(99deg, rgba(0,6,36,1) 20%, rgba(38,9,121,1) 55%, rgba(255,0,67,1) 98%);
+    position: absolute;
+    left: -48px;
+    top: 8px;
+}
+
+h2{
+    font-size: 54px;
+}
+
+h3{
+    font-size: 30px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0;
+}
+
+.Primeira-Coluna p{
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 100;
+}
+
+h4{
+    font-size: 20px;
+    color: #000;
+    margin: 30px 0;
+}
+
+.Comprar{
+    width: 150px;
+    border: none;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    background: rgb(0,6,36);
+    background: linear-gradient(99deg, rgba(0,6,36,1) 20%, rgba(38,9,121,1) 55%, rgba(255,0,67,1) 98%);
+    z-index: 2 ;
+    transition: all 0.7s cubic-bezier(.08,.61,.91,.64);
+}
+
+.Comprar img{
+    width: 30px;
+    display: none;
+    
+}
+
+.Comprar:hover{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+}
+
+.Comprar:hover img{
+    display: block;
+}
+
+.Segunda-Coluna{
+    display: flex;
+    align-items: center;
+    position: relative; 
+}
+
+.Controle{
+    width: 90%;
+    z-index: 2;
+    animation: moveController 3s infinite alternate ease-in-out;
+}
+
+.Caixa-Vazia{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(99deg, rgba(0,6,36,1) 20%, rgba(38,9,121,1) 55%, rgba(255,0,67,1) 98%);
+    height: 100%;
+    width: 80%;
+    border-radius: 20px 0 0 20px;
+    z-index: 1;
+    transform: translateX(150px);
+}
+
+.add-card{
+    z-index: 2;
+    border: none;
+    background-color: transparent;
+    cursor: pointer; 
+}
+
+.add-card img{
+    height: 100%;
+    width: 100%;
+    max-width: 55px;
+}
+
+.Social-Links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Social-Links img{
+    height: 30px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.Menu-Icon{
+    width: 25px;
+    margin-top: 15px;
+    display: none;
+}
+
+@media (max-width: 780px) {
+
+.Conteiner-Principal{
+    width: 100vh;
+    height: 100vh;
+    border-radius: 0;
+    overflow-y: auto;
+}
+
+.row{
+    flex-direction: column-reverse;
+}
+
+.Segunda-Coluna{
+   margin-bottom: 30px;
+}
+
+.Caixa-Vazia{
+    transform: translateX(70px);
+}
+
+  #menu-list{
+   position: relative;
+   top: 80px;
+   left: 60px;
+   overflow: hidden;
+   transition: all 0.8s ease-in-out;
+  }
+
+  .Menu-Icon{
+      display: block;
+      cursor: pointer;
+  }
+
+  .nav-li{
+      display: block;
+      margin-top: 5px;
+
+  }
+}
+
+@keyframes moveController {
+    from{
+        transform: translate(-7%, -7%) rotate(-5deg);
+    }
+}

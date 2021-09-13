@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./Style.css">
+    <title>Playstation Store</title>
+</head>
+
+<body>
+    <div class="Conteiner-Principal">
+        <div class="Nav-bar">
+            <img class="Logo" src="./img/logo.png" alt="Logo">
+            <nav>
+                <ul id="menu-list">
+                    <li class="nav-li"><a class="Nav-itens">Consoles</a></li>
+                    <li class="nav-li"><a class="Nav-itens">Acessórios</a></li>
+                    <li class="nav-li"><a class="Nav-itens">Controles</a></li>
+                    <li class="nav-li"><a class="Nav-itens">Outros</a></li>
+                </ul>
+            </nav>
+            <img class="Menu-Icon" alt="Botao-Menu" src="./img/menu.png" onclick="showMenu()">
+        </div>
+
+        <div class="row">
+            <div class="Primeira-Coluna">
+                <h2>Ps5 DualShock</h2>
+                <h3>Wireless Controller fo PlayStation</h3>
+                <p>Controle Original</p>
+                <h4>R$ 222,50</h4>
+                <button class="Comprar">Comprar Agora <img src="./img/arrow.png" alt="Seta"></button>
+            </div>
+
+            <div class="Segunda-Coluna">
+                <img class="Controle" src="./img/controller.png" alt="Controle">
+                <div class="Caixa-Vazia"></div>
+                <button class="add-card">
+                    <img src="./img/add.png" alt="Adicionar ao Carrinho">
+                </button>
+            </div>
+        </div>
+
+        <div class="Social-Links">
+            <img src="./img/ig.png" alt="Instagram">
+            <img src="./img/fb.png" alt="Facebook">
+            <img src="./img/tw.png" alt="Twitter">
+        </div>
+    </div>
+</body>
+
+<script>
+    const MenuList = document.getElementById("menu-list")
+    MenuList.style.maxHeight = "0px"
+
+    function showMenu() {
+        if (MenuList.style.maxHeight === "0px") {
+            MenuList.style.maxHeight = "120px"
+        } else {
+            MenuList.style.maxHeight = "0px"
+        }
+    }
+</script>
+
+</html>
